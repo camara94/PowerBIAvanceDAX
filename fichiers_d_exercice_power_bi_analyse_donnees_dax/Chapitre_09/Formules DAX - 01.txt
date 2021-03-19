@@ -1,0 +1,12 @@
+//Colonne 'Activite_Recente_Client'
+Activite_Recente_Client = DATEDIFF(MAXX(RELATEDTABLE('Indicateurs');Indicateurs[Date_Vente]);CALCULATE (LASTDATE(Calendrier_Ventes[Date_Vente]) );DAY )
+
+//Colonne 'Groupe_Activite_Recente_Client'
+Groupe_Activite_Recente_Client = SWITCH(TRUE()
+; Clients[Activite_Recente_Client] = 0; "01"
+; Clients[Activite_Recente_Client] <= 7; "02-07"
+; Clients[Activite_Recente_Client] <= 14; "08-14"
+; Clients[Activite_Recente_Client] <= 28; "15-28"
+; Clients[Activite_Recente_Client] < 56; "29-56"
+; Clients[Activite_Recente_Client] >= 56; "57+"
+;"Pas d'Activité récente")
