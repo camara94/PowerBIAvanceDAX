@@ -1,0 +1,8 @@
+//Mesure 'Ventes_Mois_Precedent'
+Ventes_Mois_Precedent = CALCULATE( [Total_Ventes_Euros];DATEADD(Calendrier_Ventes[Date_Vente];-1;MONTH))
+
+//Mesure 'Ventes_Semaine_Precedente'
+Ventes_Semaine_Precedente = CALCULATE(SUM(Indicateurs[Total_Ventes]);DATEADD(Calendrier_Ventes[Date_Vente];-7;DAY))
+
+//Mesure 'Ventes_Semaine_Suivante'
+Ventes_Semaine_Suivante = CALCULATE(SUM(Indicateurs[Total_Ventes]);DATEADD(Calendrier_Ventes[Date_Vente];7;DAY))
