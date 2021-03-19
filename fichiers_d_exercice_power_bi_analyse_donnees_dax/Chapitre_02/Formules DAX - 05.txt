@@ -1,0 +1,9 @@
+//Dimension 'Produits'
+Produits = GROUPBY('XLS-00001';'XLS-00001'[Code_Produit];'XLS-00001'[Description_Produit];'XLS-00001'[Prix_Unitaire])
+
+//Dimension 'Calendrier_Ventes'
+Calendrier_Ventes = GROUPBY('XLS-00001';'XLS-00001'[Date_Vente])
+
+//Colonne 'Total_vente'
+Total_vente = ('XLS-00001'[Prix_Unitaire] * 'XLS-00001'[Quantite_Vendue])
+
