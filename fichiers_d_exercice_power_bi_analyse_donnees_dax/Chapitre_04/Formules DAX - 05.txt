@@ -1,0 +1,8 @@
+//Colonne 'Jour_Vente'
+Jour_Vente = FORMAT(Calendrier_Ventes[Date_Vente];"ddd")
+
+//Colonne 'Dernier_Jour_Semaine_Vente'
+Dernier_Jour_Semaine_Vente = DATEADD(Calendrier_Ventes[Date_Vente]; (7 - WEEKDAY(Calendrier_Ventes[Date_Vente];2)); DAY)
+
+//Colonne 'Premier_Jour_Semaine_Vente'
+Premier_Jour_Semaine_Vente = DATEADD(Calendrier_Ventes[Date_Vente]; (- WEEKDAY(Calendrier_Ventes[Date_Vente];2) + 1); DAY)
