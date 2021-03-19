@@ -1,0 +1,2 @@
+//Colonne 'Achat_Premier_Jour'
+Achat_Premier_Jour = IF(RELATED(Clients[Date_Inscription_Client]) = Indicateurs[Date_Vente]; "Premier jour"; "Autre")
