@@ -1,0 +1,2 @@
+//Mesure 'Pourcentage_Ecart_Ventes'
+Pourcentage_Ecart_Ventes = DIVIDE(SUM(Indicateurs[Total_Ventes]) - CALCULATE(SUM(Indicateurs[Total_Ventes]); PREVIOUSQUARTER(Calendrier_Ventes[Date_Vente])); CALCULATE(SUM(Indicateurs[Total_Ventes]);PREVIOUSQUARTER(Calendrier_Ventes[Date_Vente])))

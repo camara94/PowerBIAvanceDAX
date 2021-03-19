@@ -1,0 +1,2 @@
+//Mesure 'Total_Mobile_Annuel'
+Total_Mobile_Annuel = CALCULATE(SUM(Indicateurs[Total_Ventes]) ; DATESINPERIOD(Calendrier_Ventes[Date_Vente];LASTDATE(Calendrier_Ventes[Date_Vente]);-1;YEAR))
