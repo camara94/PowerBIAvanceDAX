@@ -1,0 +1,2 @@
+//Colonne 'Meilleure_Vente'
+Meilleure_Vente = RANKX( ALL('Produits') ; SUMX(RELATEDTABLE(Indicateurs) ; [Total_Ventes_Euros]))
