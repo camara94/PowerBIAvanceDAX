@@ -1,0 +1,17 @@
+//Mesure 'Total_Ventes_Recentes'
+Total_Ventes_Recentes = 
+VAR DateRecente = DATEADD(LASTDATE(Calendrier_Ventes[Date_Vente]);-55;DAY)
+RETURN
+CALCULATE(DISTINCTCOUNT( Indicateurs[Total_Ventes]); Indicateurs[Date_Vente] >= DateRecente)
+
+//Mesure 'Nombre_Jours_Activite_Recente'
+Nombre_Jours_Activite_Recente = 
+VAR DateRecente = CALCULATE( DATEADD( LASTDATE(Calendrier_Ventes[Date_Vente]);-55;DAY) ;ALL('Calendrier_Ventes'))
+RETURN
+CALCULATE( DISTINCTCOUNT( Indicateurs[Date_Vente]); (Calendrier_Ventes[Date_Vente] >= DateRecente))
+
+//Mesure 'Total_Clients_Actifs_Recents'
+Total_Clients_Actifs_Recents = CALCULATE(COUNTROWS( DISTINCT(Clients));FILTER('Clients';Clients[Client_Actif]="Oui");FILTER(Calendrier_Ventes;Calendrier_Ventes[Periode_Recente]="Récent"))
+
+//Mesure 'Pourcentage_Clients_Actifs'
+Pourcentage_Clients_Actifs = DIVIDE([Nombre_Clients_Recents];[Total_Clients_Actifs_Recents])
