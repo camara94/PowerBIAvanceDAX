@@ -1,0 +1,17 @@
+//Table de faits 'Indicateurs'
+Indicateurs = SUMMARIZECOLUMNS('XLS-00001'[Code_Produit];
+'XLS-00001'[Date_Vente];
+'XLS-00001'[Code_Canal_Vente];
+'XLS-00001'[Code_Promotion];
+'XLS-00001'[Code_Fournisseur];
+FILTER('XLS-00001';'XLS-00001'[Code_Fournisseur] <> "47-GB");
+"Nombre_Ventes"; SUM('XLS-00001'[Quantite_Vendue]);
+"Total_Ventes"; SUM('XLS-00001'[Total_Vente]))
+
+//Dimension 'Clients'
+Clients = SUMMARIZECOLUMNS('XLS-00001'[Code_Client];
+'XLS-00001'[Date_Inscription_Client];
+FILTER('XLS-00001';'XLS-00001'[Code_Fournisseur] = "47-GB"))
+
+//Dimensions 'Canal_Ventes'
+Canal_Ventes = GROUPBY('XLS-00001';'XLS-00001'[Code_Canal_Vente];'XLS-00001'[Canal_Vente])
