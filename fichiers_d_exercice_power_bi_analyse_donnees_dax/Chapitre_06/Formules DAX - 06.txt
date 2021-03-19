@@ -1,0 +1,2 @@
+//Colonne 'Classement_Produit'
+Classement_Produit = RANKX(ALLSELECTED(Produits); [Total_Ventes_Euros])
