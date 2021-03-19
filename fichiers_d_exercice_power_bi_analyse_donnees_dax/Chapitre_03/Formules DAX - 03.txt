@@ -1,0 +1,11 @@
+//Colonne 'Metadonnee_Produit'
+Metadonnee_Produit = SEARCH("-";Produits[Description_Produit_Valide]; 1; -1)
+
+//Colonne "Metadonnee_Collection" 
+Metadonnee_Collection = SEARCH("-";Produits[Description_Produit_Valide] ; Produits[Metadonnee_Produit] + 1; -1)
+
+//Colonne 'Metadonnee_Saison'
+Metadonnee_Saison = SEARCH("-";Produits[Description_Produit_Valide] ; Produits[Metadonnee_Collection] + 1; -1)
+
+//Colonne 'Metadonnee_Couleur'
+Metadonnee_Couleur = SEARCH("-";Produits[Description_Produit_Valide] ; Produits[Metadonnee_Saison] + 1; -1)
