@@ -1,0 +1,7 @@
+//Colonne 'Categorie_Produits'
+Categorie_Produits = SWITCH(TRUE();
+Produits[Valeur_Metadonnee_Produit_Valide]     IN {"Chemise";"Tshirt";"Chemisier";"Chandail"} ; "Hauts" ;
+Produits[Valeur_Metadonnee_Produit_Valide]     IN {"Pantalon";"Shorts";"Jupe"} ; "Bas" ; 
+Produits[Valeur_Metadonnee_Produit_Valide]     IN {"Manteau";"Veste";"Gilet"} ; "Survêtement" ;
+Produits[Valeur_Metadonnee_Produit_Valide]     IN {"Chapeau";"Foulard";"Echarpe"} ; "Accessoires" ;
+Produits[Valeur_Metadonnee_Produit_Valide]    )
