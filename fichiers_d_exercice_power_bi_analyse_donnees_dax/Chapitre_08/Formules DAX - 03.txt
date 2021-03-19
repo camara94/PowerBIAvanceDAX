@@ -1,0 +1,5 @@
+//Colonne 'Anciennete_Client'
+Anciennete_Client = 
+VAR DateRecente = (DATEADD(LASTDATE(Calendrier_Ventes[Date_Vente]);-55;DAY))
+RETURN
+(DATEDIFF( CALCULATE( MINX(RELATEDTABLE(Indicateurs);Indicateurs[Date_Vente]); Calendrier_Ventes[Date_Vente] >= DateRecente); MAXX(RELATEDTABLE(Indicateurs);Indicateurs[Date_Vente]);DAY)) +1
