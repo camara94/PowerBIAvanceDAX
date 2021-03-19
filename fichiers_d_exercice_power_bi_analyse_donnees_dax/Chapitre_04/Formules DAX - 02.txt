@@ -1,0 +1,14 @@
+//Colonne 'Nom_Court_Mois_Vente'
+Nom_Court_Mois_Vente = FORMAT(Calendrier_Ventes[Date_Vente];"MMM")
+
+//Colonne 'Numero_Mois_Vente'
+Numero_Mois_Vente = FORMAT(Calendrier_Ventes[Date_Vente];"MM")
+
+//Colonne 'Date_Fin_Mois_EnCours'
+Date_Fin_Mois_EnCours = EOMONTH(Calendrier_Ventes[Date_Vente];0)
+
+//Colonne 'Date_Fin_Mois_Suivant'
+Date_Fin_Mois_Suivant = EOMONTH(Calendrier_Ventes[Date_Vente];1)
+
+//Colonne 'Date_Fin_Mois_Precedent'
+Date_Fin_Mois_Precedent = EOMONTH(Calendrier_Ventes[Date_Vente];-1)
