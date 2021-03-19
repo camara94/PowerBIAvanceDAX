@@ -1,0 +1,2 @@
+//Colonne 'Description_Produit_Valide'
+Description_Produit_Valide = SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(Produits[Description_Produit]; " "; "-"); "Blue-ciel"; "Bleu ciel"); "Bleu-Ciel"; "Bleu ciel"); "Bleu-ciel"; "Bleu ciel")
