@@ -1,0 +1,2 @@
+//Colonne 'Valeur_Metadonnee_Produit_Valide'
+Valeur_Metadonnee_Produit_Valide = REPLACE(LOWER(Produits[Valeur_Metadonnee_Produit]);1;1;UPPER((LEFT(LOWER(Produits[Valeur_Metadonnee_Produit]);1))))
