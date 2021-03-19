@@ -1,0 +1,2 @@
+//Colonne 'Hierachie_Produits'
+Hierachie_Produits = COMBINEVALUES("/";Produits[Valeur_Metadonnee_Collection];Produits[Valeur_Metadonnee_Produit_Valide];Produits[Valeur_Metadonnee_Couleur])
