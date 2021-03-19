@@ -1,0 +1,5 @@
+//Colonne 'Total_Toutes_Ventes'
+Total_Toutes_Ventes = CALCULATE(SUM([Total_Ventes]);ALL(Indicateurs))
+
+//Colonne 'Pourcentage_Ventes'
+Pourcentage_Ventes = DIVIDE( [Total_Ventes_Euros] ; [Total_Toutes_Ventes] ; 0)
