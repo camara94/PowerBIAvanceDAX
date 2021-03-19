@@ -1,0 +1,5 @@
+//Colonne 'Nombre_Produit_Achete'
+Nombre_Produit_Achete = SUMX(RELATEDTABLE(Indicateurs);Indicateurs[Nombre_Ventes])
+
+//Colonne 'Achat_Multiple'
+Achat_Multiple = IF(Clients[Nombre_Produit_Achete] = 1 ;"Simple";"Multiple")
