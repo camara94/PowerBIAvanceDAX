@@ -1,0 +1,8 @@
+//Colonne 'Date_Debut_Mois_EnCours'
+Date_Debut_Mois_EnCours = DATE(YEAR(Calendrier_Ventes[Date_Vente]);MONTH(Calendrier_Ventes[Date_Vente]); 1)
+
+//Colonne 'Date_Debut_Mois_Suivant'
+Date_Debut_Mois_Suivant = DATEADD(Calendrier_Ventes[Date_Debut_Mois_EnCours];1;MONTH)
+
+//Colonne 'Date_Debut_Mois_Precedent'
+Date_Debut_Mois_Precedent = DATEADD(Calendrier_Ventes[Date_Debut_Mois_EnCours];-1;MONTH)
