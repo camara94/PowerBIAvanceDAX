@@ -1,0 +1,14 @@
+//Colonne 'Valeur_Metadonnee_Produit'
+Valeur_Metadonnee_Produit = LEFT(Produits[Description_Produit_Valide]; Produits[Metadonnee_Produit] -1)
+
+//Colonne "Valeur_Metadonnee_Collection" 
+Valeur_Metadonnee_Collection = MID(Produits[Description_Produit_Valide]; Produits[Metadonnee_Produit] +1; (Produits[Metadonnee_Collection] - Produits[Metadonnee_Produit]) -1)
+
+//Colonne 'Valeur_Metadonnee_Saison'
+Valeur_Metadonnee_Saison = MID(Produits[Description_Produit_Valide]; Produits[Metadonnee_Collection] +1; (Produits[Metadonnee_Saison] - Produits[Metadonnee_Collection]) -1)
+
+//Colonne 'Valeur_Metadonnee_Couleur'
+Valeur_Metadonnee_Couleur = MID(Produits[Description_Produit_Valide]; Produits[Metadonnee_Collection] +1; (Produits[Metadonnee_Saison] - Produits[Metadonnee_Collection]) -1)
+
+//Colonne 'Valeur_Metadonnee_Taille'
+Valeur_Metadonnee_Taille = RIGHT(Produits[Description_Produit_Valide];LEN(Produits[Description_Produit_Valide])-Produits[Metadonnee_Couleur])
