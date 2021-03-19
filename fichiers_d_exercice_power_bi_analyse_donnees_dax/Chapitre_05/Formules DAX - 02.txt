@@ -1,0 +1,17 @@
+//Mesure 'Total_Ventes_Euros'
+Ventes_Euros = SUM([Total_Ventes])
+
+//Mesure 'Moyenne_Ventes_Euros'
+Moyenne_Ventes_Euros = AVERAGE([Total_Ventes])
+
+//Mesure 'Median_Ventes_Euros'
+Median_Ventes_Euros = MEDIAN([Total_Ventes])
+
+//Mesure 'Maximum_Ventes_Euros'
+Maximum_Ventes_Euros = MAX([Total_Ventes])
+
+//Mesure 'Minimum_Ventes_Euros'
+Minimum_Ventes_Euros = MIN([Total_Ventes])
+
+//Mesure 'Client_Unique'
+Client_Unique = DISTINCTCOUNT([Code_Client])
