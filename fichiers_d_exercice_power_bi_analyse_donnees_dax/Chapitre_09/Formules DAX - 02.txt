@@ -1,0 +1,24 @@
+//Mesure 'Nombre_Clients_Recents'
+Nombre_Clients_Recents = 
+VAR DateRecente = DATEADD(LASTDATE(Calendrier_Ventes[Date_Vente]);-55;DAY)
+RETURN
+CALCULATE(DISTINCTCOUNT( Indicateurs[Code_Client]); Indicateurs[Date_Vente] >= DateRecente)
+
+//Colonne 'Client_Actif'
+Client_Actif = IF( Clients[Premiere_Date_Recente] = BLANK(); "Non";"Oui")
+
+//Colonne 'Nombre_Jours_Actifs'
+Nombre_Jours_Actifs = CALCULATE( DISTINCTCOUNT( Indicateurs[Date_Vente]))
+
+//Colonne 'Nombre_Jours_Activite_Recente'
+Nombre_Jours_Activite_Recente = 
+VAR DateRecente = CALCULATE( DATEADD( LASTDATE(Calendrier_Ventes[Date_Vente]);-55;DAY) ;ALL('Calendrier_Ventes'))
+RETURN
+CALCULATE( DISTINCTCOUNT( Indicateurs[Date_Vente]); (Calendrier_Ventes[Date_Vente] >= DateRecente))
+
+//Colonne 'Periode_Recente'
+Periode_Recente = 
+VAR DebutPeriode = 
+CALCULATE(DATEADD( LASTDATE(Calendrier_Ventes[Date_Vente]);-55;DAY);ALL(Calendrier_Ventes))
+RETURN
+IF (Calendrier_Ventes[Date_Vente] >= DebutPeriode ; "Récent";"Avant")
