@@ -1,0 +1,2 @@
+//Colonne 'Prix_Moyen'
+Prix_Moyen = AVERAGEX(Indicateurs ; DIVIDE([Total_Ventes_Euros] ; Indicateurs[Nombre_Ventes] ; 0))
