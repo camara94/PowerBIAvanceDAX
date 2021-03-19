@@ -1,0 +1,2 @@
+//Colonne 'Semaine_Vente'
+Semaine_Vente = COMBINEVALUES("-";FORMAT(Calendrier_Ventes[Date_Vente];"yyyy"); IF(LEN(WEEKNUM(Calendrier_Ventes[Date_Vente];2))=1; "0" & WEEKNUM(Calendrier_Ventes[Date_Vente];2);"" & WEEKNUM(Calendrier_Ventes[Date_Vente];2)))
