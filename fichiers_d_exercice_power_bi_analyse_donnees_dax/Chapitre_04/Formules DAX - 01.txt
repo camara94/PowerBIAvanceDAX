@@ -1,0 +1,5 @@
+//Colonne 'Annee_Vente'
+Annee_Vente = FORMAT([Date_Vente];"yyyy")
+
+//Colonne 'Mois_Vente'
+Mois_Vente = FORMAT([Date_Vente];"yyyy-MM")
