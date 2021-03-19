@@ -1,0 +1,5 @@
+//Mesure 'Cumul_Annuel_ACeJour'
+Cumul_Annuel_ACeJour = TOTALYTD( [Total_Ventes_Euros] ; Calendrier_Ventes[Date_Vente])
+
+//Mesure 'Cumul_Annuel_ACeJour_Annee_Precedente'
+Cumul_Annuel_ACeJour_Annee_Precedente = TOTALYTD( [Total_Ventes_Euros] ; SAMEPERIODLASTYEAR(Calendrier_Ventes[Date_Vente]))
