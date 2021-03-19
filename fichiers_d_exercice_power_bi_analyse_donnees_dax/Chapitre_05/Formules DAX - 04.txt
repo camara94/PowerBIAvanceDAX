@@ -1,0 +1,2 @@
+//Mesure 'Nombre_Transcations'
+Nombre_Transactions = COUNTROWS(RELATEDTABLE(Indicateurs))
